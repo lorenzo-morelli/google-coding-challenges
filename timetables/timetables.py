@@ -5,6 +5,8 @@
 
 # output: [11.30, 12.30], [15.00, 15.30]
 
+PROVA
+
 def compare(time1, time2):
     hour1, minute1 = time1.split(":")
     hour2, minute2 = time2.split(":")
