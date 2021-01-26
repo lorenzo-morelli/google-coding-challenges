@@ -5,13 +5,6 @@
 
 # output: [11.30, 12.30], [15.00, 15.30]
 
-
-# booked [9:00, 11.30], [12.30, 15.00] [15.30, 18.30]
-# unavailable: [[9:00, 11.30] [9:30, 11.00] [12.30, 15.00] [15.30, 16.30] [16.00, 18.00]]
-# remove_repetitions: [[9:00, 11.30] [12.30, 15.00] [15.30, 18.00]]
-# available: [11.30, 12.30], [15.00, 15.30]
-
-
 def compare(time1, time2):
     hour1, minute1 = time1.split(":")
     hour2, minute2 = time2.split(":")
@@ -26,12 +19,12 @@ def compare(time1, time2):
         return -1
 
 
-def unavailable(sched1, sched2):  # OK
+def unavailable(sched1, sched2):
     booked = []
     p1 = 0
     p2 = 0
     while p1 < len(sched1) or p2 < len(sched2) - 1:
-        if compare(sched1[p1][0], sched2[p2][0]) == -1:  # p1 less than p2
+        if compare(sched1[p1][0], sched2[p2][0]) == -1:
             booked.append(sched1[p1])
             p1 += 1
         else:
