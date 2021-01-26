@@ -4,7 +4,6 @@
 # B: [[9:30, 11:00], [15:30, 16:30], [17:00, 18:30]]
 
 # output: [11.30, 12.30], [15.00, 15.30]
-#rimasuglio di prova
 
 def compare(time1, time2):
     hour1, minute1 = time1.split(":")
